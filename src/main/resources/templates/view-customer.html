@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View Customer</title>
+</head>
+<body>
+<h2>View Customer</h2>
+<p>ID: <span th:text="${customer.id}"></span></p>
+<p>Name: <span th:text="${customer.name}"></span></p>
+<p>DOB: <span th:text="${customer.dob}"></span></p>
+<p>Credit Limit: <span th:text="${customer.creditLimit}"></span></p>
+<p><a href="/customers">Back to Customer List</a></p>
+</body>
+</html>

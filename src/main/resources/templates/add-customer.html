@@ -1,0 +1,37 @@
+<!-- <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Customer</title>
+</head>
+<body>
+<h2>Add Customer</h2>
+<form action="#" th:action="@{/customers/save}" th:object="${customer}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+     <p>DOB: <input type="date" th:field="*{dob}" /></p> 
+    <p>Credit Limit: <input type="text" th:field="*{creditLimit}" /></p>
+    <p><input type="submit" value="Submit" /> <a href="/customers">Cancel</a></p>
+</form>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Customer</title>
+</head>
+<body>
+<h2>Add Customer</h2>
+<form action="#" th:action="@{/customers/save}" th:object="${customer}" method="post">
+    <p>Name: <input type="text" th:field="*{name}" /></p>
+    <p>DOB: <input type="date" th:field="*{dob}" th:value="${#dates.format(customer.dob, 'yyyy-MM-dd')}" /></p> 
+   <!-- <p>DOB: <input type="date" th:field="*{dob}" th:value="${#dates.format(customer.dob, 'dd-MM-yy')}" /></p> -->  
+
+    <p>Credit Limit: <input type="text" th:field="*{creditLimit}" /></p>
+    <p><input type="submit" value="Submit" /> <a href="/customers">Cancel</a></p>
+</form>
+</body>
+</html>  
